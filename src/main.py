@@ -24,8 +24,9 @@ def scrape(event, context):
 
     page = requests.get(url)
     soup = BeautifulSoup(page.content, 'html.parser')
+    stop = soup.body.find('h2', attrs={'class': 'grid__item one-half'}).text
     departures = soup.body.find_all('td', attrs={'class': 'departure-expected'})
-    message='Next bus departures are: \n'
+    message='Next bus departures from ' + stop + ' are: \n\n'
     for x in departures:
         figure = x.find('span', attrs={'class': 'figure'}).text
         if ':' not in figure:
