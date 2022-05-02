@@ -1,3 +1,4 @@
+#Create IAM role for Lambda function
 resource "aws_iam_role" "iam_for_lambda" {
   name = "iam_for_lambda"
 
@@ -18,6 +19,7 @@ resource "aws_iam_role" "iam_for_lambda" {
 EOF
 }
 
+#Create Lambda function
 resource "aws_lambda_function" "bus_notifier" {
   filename         = "../src/lambda.zip"
   function_name    = "bus-notifier"
@@ -38,5 +40,3 @@ resource "aws_lambda_function" "bus_notifier" {
   }
 
 }
-
-
