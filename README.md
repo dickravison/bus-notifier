@@ -9,4 +9,4 @@ This is a python script to send a Telegram notification in the morning and after
 
 as environment variables. The `HOMETOWORK` and `WORKTOHOME` variables expect a URL for the bus stop to provide data on for each journey, these can be found at https://tfgm.com/public-transport/bus. 
 
-It will check the current time and if it is before midday, it will provide the data for the home to work journey. If it is after midday, it will provide the data for the work to home journey. This function will be packaged into Lambda and invoked by Eventbridge rules which can be configured using the Terraform in `tf/`
+It will check the current time and if it is before midday, it will provide the data for the home to work journey. If it is after midday, it will provide the data for the work to home journey. This function will be packaged into Lambda and invoked by an Eventbridge rule which can be configured using the Terraform in `tf/`

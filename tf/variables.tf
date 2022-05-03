@@ -33,13 +33,8 @@ variable "worktohome" {
   description = "URL for the work to home bus stop"
 }
 
-variable "hometoworkcron" {
+variable "cron" {
   type        = string
   description = "Cron to determine when to run notification for home to work journey"
-}
-
-variable "worktohomecron" {
-  type        = string
-  description = "Cron to determine when to run notification for work to home journey"
 }
 
