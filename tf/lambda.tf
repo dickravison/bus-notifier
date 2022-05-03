@@ -17,6 +17,8 @@ resource "aws_iam_role" "iam_for_lambda" {
   ]
 }
 EOF
+
+  managed_policy_arns = ["arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"]
 }
 
 #Create Lambda function
